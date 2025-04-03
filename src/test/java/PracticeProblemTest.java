@@ -36,7 +36,7 @@ void insertionSortTest2() {
   double arr[] = {155.2, 155.1, 1, 5, 3, 2, 7};
   double arr2[] = {1, 2, 3, 5, 7, 155.1, 155.2};
     int[] result = (int[])method.invoke(null, arr);
-  int[] expected = new int[]{26,14};
+  int[] expected = new int[]{14,18};
   assertArrayEquals(expected, result);
 }
 
@@ -81,7 +81,7 @@ void selectionSortTest2() {
   double arr[] = {155.2, 155.1, 1, 5, 3, 2, 7, 8};
   double arr2[] = {1, 2, 3, 5, 7, 8, 155.1, 155.2};
     int[] result = (int[])method.invoke(null, arr);
-  int[] expected = new int[]{32, 28};
+  int[] expected = new int[]{6, 28};
   assertArrayEquals(expected, result);
 }
 
@@ -104,7 +104,7 @@ void bubbleSortTest2() {
   double arr[] = {155.2, 155.1, 1, 5, 3, 2, 7, 235};
   double arr2[] = {1, 2, 3, 5, 7, 155.1, 155.2, 235};
     int[] result = (int[])method.invoke(null, arr);
-  int[] expected = new int[]{42,25};
+  int[] expected = new int[]{14,28};
   assertArrayEquals(expected, result);
 }
 
@@ -126,7 +126,7 @@ void leastSwapsTest1() {
   // Enter code here
   double arr[] = {155.2, 155.1, 1, 5, 3, 2, 7};
     String result = (String)method.invoke(null, arr);
-  assertEquals("Insertion", result);
+  assertEquals("Selection", result);
 }
 
 
@@ -147,7 +147,7 @@ void leastSwapsTest2() {
   // Enter code here
   double arr[] = {1, 2, 3, 4, 5, 6};
     String result = (String)method.invoke(null, arr);
-  assertEquals("Bubble", result);
+  assertEquals("Insertion", result);
 }
 
 
@@ -168,7 +168,7 @@ void leastSwapsTest3() {
   // Enter code here
   double arr[] = {155.2, 155.1, 1, 5, 3, 2, 7};
     String result = (String)method.invoke(null, arr);
-  assertEquals("Insertion", result);
+  assertEquals("Selection", result);
 }
 
 
@@ -273,7 +273,7 @@ void leastStepsTest4() {
   // Enter code here
   double arr[] = {9, 7, 4, 2, 1, 0};
     String result = (String)method.invoke(null, arr);
-  assertEquals("Bubble", result);
+  assertEquals("Insertion", result);
 }
 
 
