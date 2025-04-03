@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class PracticeProblem {
 
-    // Insertion Sort - returns number of swaps and comparisons
+
     public static int[] insertionSort(double[] arr) {
         int swaps = 0;
         int comparisons = 0;
@@ -14,17 +14,17 @@ public class PracticeProblem {
                 arr[j + 1] = arr[j];
                 j = j - 1;
                 comparisons++;
-                swaps++;  // Consider each insertion step as a swap
+                swaps++;
             }
             arr[j + 1] = key;
             if (j >= 0) {
-                comparisons++;  // Compare the key to arr[j] when exiting the loop
+                comparisons++;
             }
         }
         return new int[] {swaps, comparisons};
     }
 
-    // Selection Sort - returns number of swaps and comparisons
+   
 	public static int[] selectionSort(double[] arr) {
 		int swaps = 0;
 		int comparisons = 0;
@@ -38,12 +38,11 @@ public class PracticeProblem {
 				}
 			}
 	
-			// Only swap if the minimum element is not already in the correct position
 			if (minIndex != i) {
 				double temp = arr[i];
 				arr[i] = arr[minIndex];
 				arr[minIndex] = temp;
-				swaps++;  // Count only actual swaps
+				swaps++;  
 			}
 		}
 	
@@ -51,7 +50,7 @@ public class PracticeProblem {
 	}
 	
 
-    // Bubble Sort - returns number of swaps and comparisons
+
     public static int[] bubbleSort(double[] arr) {
         int swaps = 0;
         int comparisons = 0;
@@ -70,7 +69,7 @@ public class PracticeProblem {
         return new int[] {swaps, comparisons};
     }
 
-    // Least Swaps - determines which sort method had the fewest swaps
+
     public static String leastSwaps(double[] arr) {
         double[] arr1 = arr.clone();
         double[] arr2 = arr.clone();
@@ -91,7 +90,6 @@ public class PracticeProblem {
         }
     }
 
-    // Least Iterations - determines which sort method had the least number of iterations
     public static String leastIterations(double[] arr) {
         double[] arr1 = arr.clone();
         double[] arr2 = arr.clone();
